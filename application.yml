@@ -6,16 +6,17 @@ eureka:
       defaultZone: http://localhost:8576/eureka/
   instance:
     hostname: localhost
-
+#NOTE: Below variable names is user defined, so it can any kind
 microservices:
-  payment-serivice:
+  payment-service:
     endpoints:
       endpoint:
-        uri:  http://PAYMENT-SERVICE/payment/doPayment
-  order-serivice:
+        dopayuri:  http://PAYMENT-SERVICE/payment/doPayment
+        dopayupi:  http://PAYMENT-SERVICE/payment/doUpi
+  order-service:
     endpoints:
       endpoint:
-        uri:  http://ORDER-SERVICE/order/bookOrder
+        bookOrderuri:  http://ORDER-SERVICE/order/bookOrder
 spring:
   zipkin:
     base-url: http://localhost:9411/
